@@ -1,0 +1,383 @@
+﻿<Page x:Class="BX24.Escort"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:MaterialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="13"
+            TextOptions.TextFormattingMode="Ideal"
+            TextOptions.TextRenderingMode="Auto"
+            Background="{DynamicResource MaterialDesignPaper}"
+      xmlns:local="clr-namespace:BX24"
+      mc:Ignorable="d" 
+      d:DesignHeight="506" d:DesignWidth="672"
+      Title="Escort">
+
+    <Grid Background="#dad2c7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.3*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.3*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="4" Background="#43617d">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="5" Direction="-90" RenderingBias="Quality" ShadowDepth="2"/>
+            </Grid.Effect>
+            <TextBlock FontFamily="Trebushet MC" FontSize="18" FontStyle="Italic" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0">Сервис-инженеры</TextBlock>
+        </Grid>
+        <Grid Grid.Row="3" Grid.ColumnSpan="4" Background="#43617d">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="5" Direction="-90" RenderingBias="Quality" ShadowDepth="2"/>
+            </Grid.Effect>
+            <TextBlock FontFamily="Trebushet MC" FontSize="18" FontStyle="Italic" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0">Клиент-менеджеры</TextBlock>
+        </Grid>
+        <Grid Grid.Row="5" Grid.ColumnSpan="4" Background="#43617d">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="5" Direction="-90" RenderingBias="Quality" ShadowDepth="2"/>
+            </Grid.Effect>
+            <TextBlock FontFamily="Trebushet MC" FontSize="18" FontStyle="Italic" Foreground="White" VerticalAlignment="Center" Margin="10 0 0 0">Менеджеры-консультанты</TextBlock>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Trebuchet MS" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic">Бекмухамбетова Асия</TextBlock>
+            </Grid>
+            <Image Grid.Row="1" Grid.Column="2" Source="redball.png"></Image>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Image Source="image\telecom\client\Asya.png" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="10"></Image>
+                <Button Name="TEL_BA" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Click="TEL_BA_Click">
+                </Button>
+                <Image Grid.Row="1" Source="image\telecom\icon\smartphone.png" Margin="5"></Image>
+                <Button Name="TELm_BA" Grid.Row="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="TELm_BA_Click">
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="4" Grid.Row="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Trebuchet MS" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic">Анна Нестеренко</TextBlock>
+            </Grid>
+            <Image Grid.Row="1" Grid.Column="2" Source="redball.png"></Image>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Image Source="image\telecom\client\AnyaNest.png" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="10"></Image>
+                <Button Name="TEL_AN" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto">
+                </Button>
+                <Image Grid.Row="1" Source="image\telecom\icon\smartphone.png" Margin="5"></Image>
+                <Button Name="TELm_AN" Grid.Row="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="TELm_AN_Click">
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Trebuchet MS" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic">Анна Евик</TextBlock>
+            </Grid>
+            <Image Grid.Row="1" Grid.Column="2" Source="redball.png"></Image>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Image Source="image\telecom\client\AnyaEvik.png" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="10"></Image>
+                <Button Name="TEL_AE" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Click="TEL_AE_Click">
+                </Button>
+                <Image Grid.Row="1" Source="image\telecom\icon\smartphone.png" Margin="5"></Image>
+                <Button Name="TELm_AE" Grid.Row="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="TELm_AE_Click">
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Trebuchet MS" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic">Анна Детянцева</TextBlock>
+            </Grid>
+            <Image Grid.Row="1" Grid.Column="2" Source="redball.png"></Image>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Image Source="image\telecom\client\AnyaDet.png" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="10"></Image>
+                <Button Name="TEL_AD" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Click="TEL_AD_Click">
+                </Button>
+                <Image Grid.Row="1" Source="image\telecom\icon\smartphone.png" Margin="5"></Image>
+                <Button Name="TELm_AD" Grid.Row="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="TELm_AD_Click">
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Trebuchet MS" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic">Регина Букина</TextBlock>
+            </Grid>
+            <Image Grid.Row="1" Grid.Column="2" Source="redball.png"></Image>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Image Source="image\telecom\client\Regina.png" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="10"></Image>
+                <Button Name="TEL_RB" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Click="TEL_RB_Click">
+                </Button>
+                <Image Grid.Row="1" Source="image\telecom\icon\smartphone.png" Margin="5"></Image>
+                <Button Name="TELm_RB" Grid.Row="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="TELm_RB_Click">
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Trebuchet MS" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic">Дарья Назаренко</TextBlock>
+            </Grid>
+            <Image Grid.Row="1" Grid.Column="2" Source="redball.png"></Image>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Image Source="image\telecom\client\DaryaNaz.png" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="10"></Image>
+                <Button Name="TEL_DN" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Click="TEL_DN_Click">
+                </Button>
+                <Image Grid.Row="1" Source="image\telecom\icon\smartphone.png" Margin="5"></Image>
+                <Button Name="TELm_DN" Grid.Row="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="TELm_DN_Click">
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Trebuchet MS" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic">Олжас Омаров</TextBlock>
+            </Grid>
+            <Image Grid.Row="1" Grid.Column="2" Source="redball.png"></Image>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Image Source="image\telecom\client\Olzhas.png" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="10"></Image>
+                <Button Name="TEL_OO" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Click="TEL_OO_Click">
+                </Button>
+                <Image Grid.Row="1" Source="image\telecom\icon\smartphone.png" Margin="5"></Image>
+                <Button Name="TELm_OO" Grid.Row="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="TELm_OO_Click">
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="3" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Trebuchet MS" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic">Макаев Жаслан</TextBlock>
+            </Grid>
+            <Image Grid.Row="1" Grid.Column="2" Source="redball.png"></Image>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Image Source="image\telecom\icon\user.png" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="10"></Image>
+                <Button Name="TEL_MJ" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Click="TEL_MJ_Click">
+                </Button>
+                <Image Grid.Row="1" Source="image\telecom\icon\smartphone.png" Margin="5"></Image>
+                <Button Name="TELm_MJ" Grid.Row="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}">
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Trebuchet MS" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic">Кисурин Антон</TextBlock>
+            </Grid>
+            <Image Grid.Row="1" Grid.Column="2" Source="redball.png"></Image>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Image Source="image\telecom\icon\user.png" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="10"></Image>
+                <Button Name="TEL_Ka" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Click="TEL_Ka_Click_1">
+                </Button>
+                <Image Grid.Row="1" Source="image\telecom\icon\smartphone.png" Margin="5"></Image>
+                <Button Name="TELm_Ka" Grid.Row="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="TELm_Ka_Click_1">
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Trebuchet MS" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic">Кийко Антон</TextBlock>
+            </Grid>
+            <Image Grid.Row="1" Grid.Column="2" Source="redball.png"></Image>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Image Source="image\telecom\client\Anton.png" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="10"></Image>
+                <Button Name="TEL_KA" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Click="TEL_KA_Click">
+                </Button>
+                <Image Grid.Row="1" Source="image\telecom\icon\smartphone.png" Margin="5"></Image>
+                <Button Name="TELm_KA" Grid.Row="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="TELm_KA_Click">
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Trebuchet MS" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic">Жумабеков Каумен</TextBlock>
+            </Grid>
+            <Image Grid.Row="1" Grid.Column="2" Source="redball.png"></Image>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Image Source="image\telecom\client\Kaumen.png" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="10"></Image>
+                <Button Name="TEL_JK" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Click="TEL_JK_Click">
+                </Button>
+                <Image Grid.Row="1" Source="image\telecom\icon\smartphone.png" Margin="5"></Image>
+                <Button Name="TELm_JK" Grid.Row="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="TELm_JK_Click">
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

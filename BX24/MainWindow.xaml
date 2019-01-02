@@ -1,0 +1,122 @@
+﻿<Window x:Class="BX24.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          xmlns:MaterialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="13"
+            TextOptions.TextFormattingMode="Ideal"
+            TextOptions.TextRenderingMode="Auto"
+            Background="{DynamicResource MaterialDesignPaper}"
+        xmlns:local="clr-namespace:BX24"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1280" MinHeight="640" MinWidth="1024" 
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Normal"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        >
+    <Grid Background="#dad2c7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" x:Name="col1"></ColumnDefinition>
+            <ColumnDefinition x:Name="col2"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="#5a8dab">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="5" Direction="-90" RenderingBias="Quality" ShadowDepth="2"/>
+            </Grid.Effect>
+            <Image x:Name="ismouseover" Grid.Row="0" Source="image\main\logo5a.png" Margin="10">
+            </Image>
+            <Grid Grid.Row="1" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="27*"></ColumnDefinition>
+                    <ColumnDefinition Width="68*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="5"></Image>
+                <Image Grid.Row="1" Source="image\telecom\icon\support.png" Margin="5"></Image>
+                <Image Grid.Row="2" Source="image\main\responsive.png"></Image>
+                <Image Grid.Row="3" Source="image\main\newspaper.png"></Image>
+                <Image Grid.Row="4" Source="image\main\gamepad.png"></Image>
+                <Image Grid.Row="5" Source="image\main\settings.png"></Image>
+                <Button  Grid.Column="1" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Trebuchet MS" FontSize="24" Height="auto" Click="Button_Click_3" FontStyle="Italic">
+                    <TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center" Text="Telecom"></TextBlock>
+                </Button>
+                <Button Grid.Column="1" Grid.Row="1" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Trebuchet MS" FontSize="24" Height="auto" FontStyle="Italic">
+                    <TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center">Client</TextBlock>
+                </Button>
+                <Button Grid.Column="1" Grid.Row="2" FontFamily="Trebuchet MS" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" FontStyle="Italic">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Response</TextBlock>
+                </Button>
+                <Button Grid.Column="1" Grid.Row="3" FontFamily="Trebuchet MS" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Click="Button_Click_4" FontStyle="Italic">
+                    <TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center">Report</TextBlock>
+                </Button >
+                <Button  Grid.Column="1" Grid.Row="4" FontFamily="Trebuchet MS" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" FontStyle="Italic">
+                    <TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center">Game</TextBlock>
+                </Button>
+                <Button  Grid.Column="1" Grid.Row="5" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Trebuchet MS" FontSize="24" Height="auto" FontStyle="Italic" HorizontalAlignment="Left" Width="172" Click="Button_Click_2">
+                    <TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center" Text="Settings"></TextBlock>
+                </Button>
+            </Grid>
+            <Grid Grid.Row="2" Background="#43617d" Margin="15 15 15 15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.Effect>
+                    <DropShadowEffect BlurRadius="5" Direction="-90" RenderingBias="Quality" ShadowDepth="2"/>
+                </Grid.Effect>
+                <Button Name="ky" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Grid.Row="3" Grid.Column="0" Click="Button_Click_1">
+                    <Grid>
+                        <Viewbox Width="48" Height="auto" x:Name="iconopen">
+                            <Canvas Width="24" Height="24">
+                                <Path Data="M13,11H18L16.5,9.5L17.92,8.08L21.84,12L17.92,15.92L16.5,14.5L18,13H13V18L14.5,16.5L15.92,17.92L12,21.84L8.08,17.92L9.5,16.5L11,18V13H6L7.5,14.5L6.08,15.92L2.16,12L6.08,8.08L7.5,9.5L6,11H11V6L9.5,7.5L8.08,6.08L12,2.16L15.92,6.08L14.5,7.5L13,6V11Z" Fill="Black" />
+                            </Canvas>
+                        </Viewbox>
+                        <Viewbox Width="48" Height="auto" x:Name="iconclosed">
+                            <Canvas Width="24" Height="24">
+                                <Path Data="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z" Fill="Black" />
+                            </Canvas>
+                           
+                        </Viewbox>
+                    </Grid>
+                    
+                </Button>
+                <Button Grid.Column="1" Click="Button_Click_5" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto">
+                    <Viewbox Width="48" Height="auto">
+                        <Canvas Width="24" Height="24">
+                            <Path Data="M19.92,12.08L12,20L4.08,12.08L5.5,10.67L11,16.17V2H13V16.17L18.5,10.66L19.92,12.08M12,20H2V22H22V20H12Z" Fill="Black" />
+                        </Canvas>
+                    </Viewbox>
+                </Button>
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Grid.Row="3" Grid.Column="3" Click="Button_Click">
+                    <Viewbox Width="48" Height="auto">
+                        <Canvas Width="24" Height="24">
+                            <Path Data="M19,3H16.3H7.7H5A2,2 0 0,0 3,5V7.7V16.4V19A2,2 0 0,0 5,21H7.7H16.4H19A2,2 0 0,0 21,19V16.3V7.7V5A2,2 0 0,0 19,3M15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4L13.4,12L17,15.6L15.6,17Z" Fill="Black" />
+                        </Canvas>
+                    </Viewbox>
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+           
+            <Frame x:Name="frame1" NavigationUIVisibility="Hidden" Navigated="frame1_Navigated">
+            </Frame>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,62 @@
+﻿<Page x:Class="BX24.Book"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+               xmlns:MaterialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="13"
+            TextOptions.TextFormattingMode="Ideal"
+            TextOptions.TextRenderingMode="Auto"
+            Background="{DynamicResource MaterialDesignPaper}"
+      xmlns:local="clr-namespace:BX24"
+      mc:Ignorable="d" 
+      d:DesignHeight="506" d:DesignWidth="672"
+      Title="Book">
+
+    <Grid Background="#dad2c7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Trebuchet MS" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" FontStyle="Italic">Борисова Елена</TextBlock>
+            </Grid>
+            <Image Grid.Row="1" Grid.Column="2" Source="redball.png"></Image>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Image Source="image\telecom\client\Lena.png" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="image\telecom\icon\call.png" Margin="10"></Image>
+                <Button Name="TEL_BE" Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" Click="TEL_BE_Click">
+                </Button>
+                <Image Grid.Row="1" Source="image\telecom\icon\smartphone.png" Margin="5"></Image>
+                <Button Name="TELm_BE" Grid.Row="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="TELm_BE_Click">
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

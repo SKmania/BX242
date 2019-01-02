@@ -1,0 +1,167 @@
+﻿<Page x:Class="BX24.Tarif"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:MaterialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="13"
+            TextOptions.TextFormattingMode="Ideal"
+            TextOptions.TextRenderingMode="Auto"
+            Background="{DynamicResource MaterialDesignPaper}"
+      xmlns:local="clr-namespace:BX24"
+      mc:Ignorable="d" 
+      d:DesignHeight="1032" d:DesignWidth="1032"
+      Title="Tarif">
+
+    <Grid Background="#dad2c7">
+      
+            <Grid>
+            <Frame x:Name="navreportdeep"></Frame>
+                <Grid x:Name="gridreport">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.4*"></RowDefinition>
+                        <RowDefinition Height="0.7*"></RowDefinition>
+                        <RowDefinition Height="2.5*"></RowDefinition>
+                        <RowDefinition Height="2.5*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200*"></ColumnDefinition>
+                        <ColumnDefinition Width="200*"></ColumnDefinition>
+                        <ColumnDefinition Width="200*"></ColumnDefinition>
+                        <ColumnDefinition Width="200*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.ColumnSpan="4" Background="#43617d">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.Effect>
+                            <DropShadowEffect BlurRadius="5" Direction="-90" RenderingBias="Quality" ShadowDepth="2"/>
+                        </Grid.Effect>
+                        <Button Grid.Column="0" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}">
+                            <TextBlock FontFamily="Trebuchet MS" FontSize="34" TextAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" Text="ГУ" Foreground="Black"></TextBlock>
+                        </Button>
+                        <Button Grid.Column="1" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto">
+                            <TextBlock FontFamily="Trebuchet MS" Foreground="Black" FontSize="34" TextAlignment="Center" VerticalAlignment="Center" FontStyle="Italic">ТОО</TextBlock>
+                        </Button>
+                        <Button Grid.Column="2" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}">
+                            <TextBlock Foreground="Black" FontFamily="Trebuchet MS" FontSize="34" TextAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" Text="Все"></TextBlock>
+                        </Button>
+                        <TextBlock Grid.Column="3" FontFamily="Trebuchet MS" FontSize="34" TextAlignment="Center" VerticalAlignment="Center" Foreground="#DDFFFFFF" FontStyle="Italic" Text="0"/>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox VerticalAlignment="Center" HorizontalAlignment="Stretch"  Margin="10 0 10 0" Grid.Column="0" FontFamily="Roboto" FontWeight="Bold" FontSize="22" TextAlignment="Center" CaretBrush="#FF43617D">
+                        </TextBox>
+                        <Button Grid.Column="1" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click" HorizontalAlignment="Left" Width="86">
+                            <Viewbox Width="48" Height="48">
+                                <Canvas Width="24" Height="24">
+                                    <Path Data="M13,7.5H18V9.5H13V7.5M13,14.5H18V16.5H13V14.5M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M19,19V5H5V19H19M11,6V11H6V6H11M10,10V7H7V10H10M11,13V18H6V13H11M10,17V14H7V17H10Z" Fill="Black" />
+                                </Canvas>
+                            </Viewbox>
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" FontFamily="Trebuchet MS" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic">Тип:</TextBlock>
+                        <TextBlock Grid.Column="1" FontFamily="Trebuchet MS" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic">--</TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" FontFamily="Trebuchet MS" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic">Тариф:</TextBlock>
+                        <TextBlock Grid.Column="1" FontFamily="Trebuchet MS" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic">--</TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                        <ListBox Height="auto" Background="White" Margin="10">
+                            <ListBox.Effect>
+                                <DropShadowEffect BlurRadius="5" Direction="-90" RenderingBias="Quality" ShadowDepth="2"/>
+                            </ListBox.Effect>
+                        </ListBox>
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Grid.RowSpan="10" Margin="10" Background="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                                <ColumnDefinition Width="8*"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.Effect>
+                                <DropShadowEffect BlurRadius="5" Direction="-90" RenderingBias="Quality" ShadowDepth="2"/>
+                            </Grid.Effect>
+                            <TextBox Margin="10 0 10 0" IsReadOnly="True" Grid.Column="1" Grid.Row="0" FontFamily="Trebuchet MS" FontStyle="Italic" FontSize="16" TextAlignment="Center" VerticalAlignment="Center" CaretBrush="#FF43617D">Линия консультации</TextBox>
+                            <TextBox Margin="10 0 10 0" IsReadOnly="True" Grid.Column="1"  Grid.Row="1" FontFamily="Trebuchet MS" FontStyle="Italic" FontSize="16" TextAlignment="Center" VerticalAlignment="Center">Выезд специалиста</TextBox>
+                            <TextBox Margin="10 0 10 0" IsReadOnly="True" Grid.Column="1"  Grid.Row="2"  VerticalAlignment="Center" FontFamily="Trebuchet MS" FontStyle="Italic" FontSize="16" TextAlignment="Center">Включена в тариф</TextBox>
+                            <TextBox Margin="10 0 10 0" IsReadOnly="True" Grid.Column="1"  Grid.Row="3" FontFamily="Trebuchet MS" FontStyle="Italic" FontSize="16" TextAlignment="Center" VerticalAlignment="Center">Линия с подключением</TextBox>
+                            <TextBox Margin="10 0 10 0" IsReadOnly="True" Grid.Column="1"  Grid.Row="4" FontFamily="Trebuchet MS" FontStyle="Italic" FontSize="16" TextAlignment="Center" VerticalAlignment="Center">Платная(почасовая)</TextBox>
+                            <TextBox Margin="10 0 10 0" IsReadOnly="True" Grid.Column="1"  Grid.Row="5" FontFamily="Trebuchet MS" FontStyle="Italic" FontSize="14" TextAlignment="Center" VerticalAlignment="Center">Выезд менеджера-консультанта</TextBox>
+                            <TextBox Margin="10 0 10 0" IsReadOnly="True" Grid.Column="1"  Grid.Row="6" FontFamily="Trebuchet MS" FontStyle="Italic" FontSize="16" TextAlignment="Center" VerticalAlignment="Center">Экстренная консультация</TextBox>
+                            <TextBox Margin="10 0 10 0" IsReadOnly="True" Grid.Column="1"  Grid.Row="7" FontFamily="Trebuchet MS" FontStyle="Italic" FontSize="16" TextAlignment="Center" VerticalAlignment="Center">Государственный портал</TextBox>
+                            <TextBox Margin="10 0 10 0" IsReadOnly="True" Grid.Column="1"  Grid.Row="8" FontFamily="Trebuchet MS" FontStyle="Italic" FontSize="16" TextAlignment="Center" VerticalAlignment="Center">СОНО</TextBox>
+                            <TextBox Margin="10 0 10 0" IsReadOnly="True" Grid.Column="1"  Grid.Row="9" FontFamily="Trebuchet MS" FontStyle="Italic" FontSize="16" TextAlignment="Center" VerticalAlignment="Center">Кабинет налогоплательщика</TextBox>
+                            <TextBlock Grid.Column="2" Grid.Row="0"  FontFamily="Trebuchet MS" FontStyle="Italic" FontSize="14" TextAlignment="Center" VerticalAlignment="Center">00</TextBlock>
+                            <TextBlock Grid.Column="3" Grid.Row="0"  FontFamily="Trebuchet MS" FontStyle="Italic" FontSize="14" TextAlignment="Center" VerticalAlignment="Center">00</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Viewbox Width="36" Height="36">
+                            <Canvas Width="24" Height="24" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Path Data="M11,15H13V17H11V15M11,7H13V13H11V7M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20Z" Fill="Black" />
+                            </Canvas>
+                        </Viewbox>
+                            </TextBlock>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="4" Grid.ColumnSpan="4" Grid.RowSpan="3">
+                        <DataGrid Margin="10">
+                            <DataGrid.Effect>
+                                <DropShadowEffect BlurRadius="5" Direction="-90" RenderingBias="Quality" ShadowDepth="2"/>
+                            </DataGrid.Effect>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+            </Grid>
+       
+    </Grid>
+</Page>

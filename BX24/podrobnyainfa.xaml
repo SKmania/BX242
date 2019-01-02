@@ -1,0 +1,97 @@
+﻿<Page x:Class="BX24.podrobnyainfa"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:MaterialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="13"
+            TextOptions.TextFormattingMode="Ideal"
+            TextOptions.TextRenderingMode="Auto"
+            Background="{DynamicResource MaterialDesignPaper}"
+      xmlns:local="clr-namespace:BX24"
+      mc:Ignorable="d" 
+      d:DesignHeight="692" d:DesignWidth="692"
+      Title="podrobnyainfa"
+      >
+    <Grid Background="#dad2c7">
+        <Grid>
+            <Frame x:Name="backtoreport"></Frame>
+        </Grid>
+        <Grid x:Name="gridnavdeepreport">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="1.5*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">ГУ / ТОО</TextBlock>
+            <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Тип</TextBlock>
+            <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Тариф</TextBlock>
+            <TextBlock Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Линия консультации</TextBlock>
+            <TextBlock Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Включена в тариф</TextBlock>
+            <TextBlock Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Линия с подключением</TextBlock>
+            <TextBlock Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Платная(почасовая)</TextBlock>
+            <TextBlock Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Выезд специалиста</TextBlock>
+            <TextBlock Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Выезд менеджера-консультанта</TextBlock>
+            <TextBlock Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Экстренная консультация</TextBlock>
+            <TextBlock Grid.Row="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Государственный портал</TextBlock>
+            <TextBlock Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Соно</TextBlock>
+            <TextBlock Grid.Row="12" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Кабинет налогоплательшика</TextBlock>
+            <Grid Grid.Column="1" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Количество</TextBlock>
+                <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">Час / Минута</TextBlock>
+            </Grid>
+            
+            <Grid Grid.ColumnSpan="2" Grid.Row="13">
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" FontWeight="Bold" TextDecorations="{x:Null}" FontStyle="Italic">ГГ/ММ/ДД</TextBlock>
+                <Button Grid.Column="1" Width="auto" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <Viewbox Width="48" Height="48">
+                        <Canvas Width="24" Height="24">
+                            <Path Data="M2,2V5.5C3.1,5.5 4,6.62 4,8C4,9.38 3.1,10.5 2,10.5V13.5C3.1,13.5 4,14.62 4,16C4,17.38 3.1,18.5 2,18.5V22H5.5C5.5,20.9 6.62,20 8,20C9.38,20 10.5,20.9 10.5,22H13.5C13.5,20.9 14.62,20 16,20C17.38,20 18.5,20.9 18.5,22H22V18.5C20.9,18.5 20,17.38 20,16V16C20,14.62 20.9,13.5 22,13.5V10.5C20.9,10.5 20,9.38 20,8V8C20,6.62 20.9,5.5 22,5.5V2H18.5C18.5,3.1 17.38,4 16,4C14.62,4 13.5,3.1 13.5,2H10.5C10.5,3.1 9.38,4 8,4C6.62,4 5.5,3.1 5.5,2H2M6,6H18V18H6V6M9,7A2,2 0 0,0 7,9A2,2 0 0,0 9,11A2,2 0 0,0 11,9A2,2 0 0,0 9,7M17,10L14,13L12,12L7,17H17V10Z" Fill="Black" />
+                        </Canvas>
+                    </Viewbox>
+                </Button>
+                <Button Grid.Column="2" Width="auto" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <Viewbox Width="48" Height="48">
+                        <Canvas Width="24" Height="24">
+                            <Path Data="M21,8V7L18,9L15,7V8L18,10M22,3H2A2,2 0 0,0 0,5V19A2,2 0 0,0 2,21H22A2,2 0 0,0 24,19V5A2,2 0 0,0 22,3M8,6A3,3 0 0,1 11,9A3,3 0 0,1 8,12A3,3 0 0,1 5,9A3,3 0 0,1 8,6M14,18H2V17C2,15 6,13.9 8,13.9C10,13.9 14,15 14,17M22,12H14V6H22" Fill="Black" />
+                        </Canvas>
+                    </Viewbox>
+                </Button>
+                <Button Grid.Column="3" Width="auto" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click">
+                    <Viewbox Width="48" Height="48">
+                        <Canvas Width="24" Height="24">
+                            <Path Data="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z" Fill="Black" />
+                        </Canvas>
+                    </Viewbox>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
